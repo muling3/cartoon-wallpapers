@@ -1,5 +1,4 @@
 import 'package:cartoon_wallpapers/components/app_bar.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CartoonItemScreen extends StatelessWidget {

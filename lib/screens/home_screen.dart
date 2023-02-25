@@ -10,7 +10,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final _pageController = PageController(viewportFraction: 0.9);
+  final _pageController = PageController(viewportFraction: 1.0);
 
   var currentPage = 0;
 
@@ -25,29 +25,29 @@ class _HomeState extends State<Home> {
         width: size.width,
         child: Column(
           children: [
-            SafeArea(
-              child: Container(
-                margin: const EdgeInsets.only(top: 20, bottom: 10),
-                child: Neumorphic(
-                  style: NeumorphicStyle(
-                    shape: NeumorphicShape.convex,
-                    boxShape:
-                        NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
-                    depth: -10,
-                    intensity: 0.86,
-                    lightSource: LightSource.topLeft,
-                    color: Colors.grey.withOpacity(0.2),
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    child: const Text(
-                      "Cartoon Wallpapers",
-                      style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
+            Container(
+              width: size.width,
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              margin: const EdgeInsets.only(top: kToolbarHeight * 0.6, bottom: 20),
+              child: Neumorphic(
+                padding: const EdgeInsets.all(12.0),
+                style: NeumorphicStyle(
+                  shape: NeumorphicShape.concave,
+                  boxShape:
+                      NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                  depth: -10,
+                  intensity: 1.0,
+                  lightSource: LightSource.topLeft,
+                  oppositeShadowLightSource: true,
+                  color: Colors.white,
+                ),
+                child: const Text(
+                  "Cartoon Wallpapers",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),
